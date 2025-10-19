@@ -43,8 +43,5 @@ Catboost модель является довольно слабой, чтобы
    ```
 2. Запустите контейнер, смонтировав локальные папки `input` и `output`:
    ```bash
-    docker run --rm \                                                                                                                                                                                                                                                                                          1087ms
-            -v "$(pwd)/input:/app/input:rw" \
-            -v "$(pwd)/output:/app/output:rw" \
-            fraud-app
+    docker run --rm -v "$(pwd)/input:/app/input:rw" -v "$(pwd)/output:/app/output:rw" fraud-app
    ```
