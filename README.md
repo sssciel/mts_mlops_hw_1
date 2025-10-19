@@ -29,3 +29,20 @@ Catboost модель является довольно слабой, чтобы
 - Класс обработчика watchdog
 
 Кроме этого во всем проекте настроено логирование с разными уровнями логов.
+
+## Запуск сервиса
+0. Подготовьте папки для входных и выходных данных:
+   ```bash
+   mkdir input output
+   ```
+1. Соберите Docker образ:
+   ```bash
+   docker build -t fraud-app .
+   ```
+2. Запустите контейнер, смонтировав локальные папки `input` и `output`:
+   ```bash
+    docker run --rm \                                                                                                                                                                                                                                                                                          1087ms
+            -v "$(pwd)/input:/app/input:rw" \
+            -v "$(pwd)/output:/app/output:rw" \
+            fraud-app
+   ```
