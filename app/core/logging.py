@@ -1,13 +1,13 @@
 import logging
 import sys
-
+from pathlib import Path
 
 def setup_logging():
     log_formatter = logging.Formatter(
         '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
 
-    file_handler = logging.FileHandler("app.log")
+    file_handler = logging.NullHandler()
     file_handler.setFormatter(log_formatter)
 
     stream_handler = logging.StreamHandler(sys.stdout)
