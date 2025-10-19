@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+teta-ml-1-2025
+.venv
+*.csv
+.DS_Store
+.idea/

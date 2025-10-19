@@ -1,0 +1,7 @@
+catboost~=1.2.8
+watchdog~=6.0.0
+pandas~=2.3.3
+haversine~=2.9.0
+numpy~=2.3.4
+geopy~=2.4.1
+scikit-learn~=1.7.2
